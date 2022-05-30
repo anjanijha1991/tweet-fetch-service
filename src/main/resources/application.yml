@@ -6,37 +6,16 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017
       database: tweet-topics-db
-  security:
-   oauth2:
-     client:
-       registration:
-         google:
-           clientId: <GOOGLE-CLIENT-ID>
-           clientSecret: <GOOGLE-CLIENT-SECRET>
-           clientName: topics-tracker
-           redirectUri: http://localhost:8082/login/oauth2/code/google
 server.port: 8082
-
-eureka:
- client:
-   prefer-same-zone-eureka: true
-   register-with-eureka: true
-   fetch-registry: true
-   service-url:
-     hk-zone-1: ${eureka_url:http://eureka-server-hk-1:8761/eureka}
-     hk-zone-2: ${eureka_url:http://eureka-server-hk-1:8762/eureka}
-   availability-zones:
-     ln-region : ln-zone
-     hk-region: hk-zone-1, hk-zone-2
 
 tweet:
   app-name: topics-tracker
-  o-auth-consumer-key: <O-AUTH-CONSUMER-KEY>
-  o-auth-consumer-secret: <O-AUTH-CONSUMER-SECRET>
-  access-token: <ACCESS_TOKEN>
-  access-token-secret: <ACCESS_TOKEN_SECRET>
-  bearer-token: <BEARER_TOKEN>
+  o-auth-consumer-key: ri3yzX4VtYhZyHv9LYyGMr6C3
+  o-auth-consumer-secret: usbBrSM3F2yoi8JRDTYz3TuJdccqkr3p2ZMFCAHZzg3PV2rSHi
+  access-token: 108006069-BkPIkey1hwm5VWKQPc0Op53EibjBeqrCH79CRwhy
+  access-token-secret: ximmt4RiBoDawuj3unzbcI1gop9sSygawEllnGL3Z71fU
+  bearer-token: AAAAAAAAAAAAAAAAAAAAAHflcQEAAAAAyWQf%2BNq4uzCbQuoVPpKh7LCTv7s%3DEqSADviPyrPmAV11fg6lawxXJCeNEnSbhs010V1zO89nYnGn6T
 
-logging:
- level:
-   org.springframework.web.client.RestTemplate: DEBUG
+#logging:
+#  level:
+#    org.springframework.web.client.RestTemplate: DEBUG

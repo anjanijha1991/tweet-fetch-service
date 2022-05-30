@@ -3,7 +3,3 @@ server:
 kafka_server:
   uri: 127.0.0.1:9092
 tweet_topic: tweet_topic
-eureka:
- instance:
-   metadata-map:
-     zone: hk-zone-1
