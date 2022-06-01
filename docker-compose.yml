@@ -1,0 +1,31 @@
+version: 2.5.1
+
+services:
+  tweet-fetch-service:
+    container_name: tweet-fetch-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8082"
+    external_links:
+      - redis-master
+      - mysql-standalone:mysql
+    networks:
+      - app
+  tweet-fetch-service-2:
+    container_name: tweet-fetch-service-2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8082"
+    external_links:
+      - redis-master
+      - mysql-standalone:mysql
+#    networks:
+#      - app
+
+#networks:
+#  app:
+#    external: true
